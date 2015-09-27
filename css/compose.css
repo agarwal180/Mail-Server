@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+td{
+	   font:Tahoma, Geneva, sans-serif;
+	   color:#FFF;
+	   font-size:20px;
+	   vertical-align:top;
+   }
+   .buttons{
+	   background-color:#00F;
+	   width:80px;
+	   height:35px;
+	   font-size:22px;
+	   font-family:Tahoma, Geneva, sans-serif;
+	   color:#FFF;
+	   border-radius:8px;
+   }
+

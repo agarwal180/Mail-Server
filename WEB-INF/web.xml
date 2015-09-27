@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <!-- Define servlets that are included in the example application -->
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>loginServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>signup</servlet-name>
+        <servlet-class>CreateNewAccountServlet</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>account</servlet-name>
+        <servlet-class>accountcreateServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>againlogin</servlet-name>
+        <servlet-class>againloginServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>compose</servlet-name>
+        <servlet-class>composeServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>msgs</servlet-name>
+        <servlet-class>messageServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>composemail</servlet-name>
+        <servlet-class>ComposeMailServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>signout</servlet-name>
+        <servlet-class>signoutServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>DeleteRowServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>mail</servlet-name>
+        <servlet-class>openmailServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>signup</servlet-name>
+        <url-pattern>/signupServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>account</servlet-name>
+        <url-pattern>/NewAccountServlet</url-pattern>
+    </servlet-mapping>
+		
+		<servlet-mapping>
+        <servlet-name>againlogin</servlet-name>
+        <url-pattern>/indexServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>compose</servlet-name>
+        <url-pattern>/ComposeServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>msgs</servlet-name>
+        <url-pattern>/msgsServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>signout</servlet-name>
+        <url-pattern>/signoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>composemail</servlet-name>
+        <url-pattern>/sendsaveServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>mail</servlet-name>
+        <url-pattern>/OpenMailServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,184 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.22-rc-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema domail
+--
+
+CREATE DATABASE IF NOT EXISTS domail;
+USE domail;
+
+--
+-- Definition of table `draft`
+--
+
+DROP TABLE IF EXISTS `draft`;
+CREATE TABLE `draft` (
+  `u_id` int(10) unsigned NOT NULL,
+  `serialno` int(10) unsigned NOT NULL,
+  `frommail` varchar(500) NOT NULL,
+  `tomail` varchar(500) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `date` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `draft`
+--
+
+/*!40000 ALTER TABLE `draft` DISABLE KEYS */;
+/*!40000 ALTER TABLE `draft` ENABLE KEYS */;
+
+
+--
+-- Definition of table `inbox`
+--
+
+DROP TABLE IF EXISTS `inbox`;
+CREATE TABLE `inbox` (
+  `u_id` int(10) unsigned NOT NULL,
+  `serialno` int(10) unsigned NOT NULL,
+  `frommail` varchar(500) NOT NULL,
+  `tomail` varchar(500) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `date` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `inbox`
+--
+
+/*!40000 ALTER TABLE `inbox` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inbox` ENABLE KEYS */;
+
+
+--
+-- Definition of table `outbox`
+--
+
+DROP TABLE IF EXISTS `outbox`;
+CREATE TABLE `outbox` (
+  `u_id` int(10) unsigned NOT NULL,
+  `serialno` int(10) unsigned NOT NULL,
+  `frommail` varchar(500) NOT NULL,
+  `tomail` varchar(500) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `date` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `outbox`
+--
+
+/*!40000 ALTER TABLE `outbox` DISABLE KEYS */;
+INSERT INTO `outbox` (`u_id`,`serialno`,`frommail`,`tomail`,`subject`,`msg`,`date`) VALUES 
+ (2,1,'ak18021994@domail.com','agarwal8217@domai.com','resume ','shi hai','2015/08/18 02:22:51'),
+ (3,2,'shiv123@domail.com','agarwal8217@domai.com','wow','hyyyyyyyy','2015/08/18 12:17:37');
+/*!40000 ALTER TABLE `outbox` ENABLE KEYS */;
+
+
+--
+-- Definition of table `sent`
+--
+
+DROP TABLE IF EXISTS `sent`;
+CREATE TABLE `sent` (
+  `u_id` int(10) unsigned NOT NULL,
+  `serialno` int(10) unsigned NOT NULL,
+  `frommail` varchar(500) NOT NULL,
+  `tomail` varchar(500) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `date` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sent`
+--
+
+/*!40000 ALTER TABLE `sent` DISABLE KEYS */;
+INSERT INTO `sent` (`u_id`,`serialno`,`frommail`,`tomail`,`subject`,`msg`,`date`) VALUES 
+ (2,1,'ak18021994@domail.com','agarwal8217@domail.com','resume ','shi hai','2015/08/18 02:23:40');
+/*!40000 ALTER TABLE `sent` ENABLE KEYS */;
+
+
+--
+-- Definition of table `trash`
+--
+
+DROP TABLE IF EXISTS `trash`;
+CREATE TABLE `trash` (
+  `u_id` int(10) unsigned NOT NULL,
+  `serialno` int(10) unsigned NOT NULL,
+  `frommail` varchar(500) NOT NULL,
+  `tomail` varchar(500) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `date` varchar(500) NOT NULL,
+  `type` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trash`
+--
+
+/*!40000 ALTER TABLE `trash` DISABLE KEYS */;
+INSERT INTO `trash` (`u_id`,`serialno`,`frommail`,`tomail`,`subject`,`msg`,`date`,`type`) VALUES 
+ (2,1,'ak18021994@domail.com','agarwal8217@domail.com','resume ','shi hai','2015/08/18 02:23:40','inbox');
+/*!40000 ALTER TABLE `trash` ENABLE KEYS */;
+
+
+--
+-- Definition of table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `u_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `fname` varchar(500) NOT NULL,
+  `lname` varchar(500) NOT NULL,
+  `uname` varchar(500) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  `backupemail` varchar(500) NOT NULL,
+  `dob` varchar(500) NOT NULL,
+  `sex` varchar(50) NOT NULL,
+  PRIMARY KEY (`u_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`u_id`,`fname`,`lname`,`uname`,`password`,`backupemail`,`dob`,`sex`) VALUES 
+ (1,'Shubham','Agarwal','agarwal8217@domail.com','123456','shubhi33352@yahoo.com','2003-Jan-1','Male'),
+ (2,'Akshay','Nagar','ak18021994@domail.com','1234567','shubhi33352@yahoo.com','2005-Mar-6','Male'),
+ (3,'Shivam','Patidar','shiv123@domail.com','123456','shubhi33352@yahoo.com','2009-Apr-4','Male');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

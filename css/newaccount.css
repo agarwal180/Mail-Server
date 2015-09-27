@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;}
+body
+{
+	background:#FF3333;}
+#sign
+{
+	margin-left:500px;
+	margin-top:30px;
+	font:50px Tahoma, Geneva, sans-serif;}
+#txt
+{
+	margin-left:500px;
+	margin-top:20px;}
+.name
+{
+	font:25px arial;}
+.same
+{
+	padding:10px;
+	width:450px;
+	-webkit-border-radius:5px;
+	margin-bottom:10px;}
+
+#lstname
+{
+	padding:10px;
+	width:200px;
+	-webkit-border-radius:5px;
+	margin-bottom:10px;}
+#lstname1
+{
+	padding:10px;
+	width:200px;
+	-webkit-border-radius:5px;
+	margin-bottom:10px;
+	margin-left:20px;}
+
+.box
+{
+	font:15px tahoma;
+	padding-left:10px;
+	margin-top:10px;
+	margin-left:5px;}
+.box1
+{
+	font:15px tahoma;
+	padding-left:5px;
+	margin-top:10px;
+	margin-left:10px;}
+
+#rad
+{
+	margin-left:10px;
+	margin-top:25px;
+}
+input.signupbutton
+{
+	margin-left:0px;
+	margin-top:25px;
+	font:20px arial;
+	-webkit-border-radius:10px;
+	padding:8px;
+	width:200px;}
